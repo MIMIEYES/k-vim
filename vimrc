@@ -508,7 +508,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " y$ -> Y Make Y behave like other capitals
-map Y y$
+"map Y y$
 
 " 复制选中区到系统剪切板中
 vnoremap <leader>y "+y
@@ -556,6 +556,12 @@ nnoremap U <C-r>
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+
+if filereadable("~/.localvimrc")
+  source ~/.localvimrc
+endif
+"source .localvimrc
 
 "==========================================
 " FileType Settings  文件类型设置
