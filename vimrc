@@ -308,10 +308,10 @@ autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
 
 
 " 上下左右键的行为 会显示其他信息
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+"inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+"inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+"inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+"inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " 打开自动定位到最后编辑的位置, 需要确认 .viminfo 当前用户可写
 if has("autocmd")
@@ -511,7 +511,7 @@ vnoremap > >gv
 "map Y y$
 
 " 复制选中区到系统剪切板中
-vnoremap <leader>y "+y
+"vnoremap <leader>y "+y
 
 " auto jump to end of select
 " vnoremap <silent> y y`]
@@ -558,10 +558,6 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 
-if filereadable("~/.localvimrc")
-  source ~/.localvimrc
-endif
-"source .localvimrc
 
 "==========================================
 " FileType Settings  文件类型设置
@@ -692,5 +688,8 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 
-
+" load local vimrc
+if !empty(glob("~/local.vim"))
+    source ~/local.vim
+endif
 
