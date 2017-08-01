@@ -677,6 +677,7 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+<<<<<<< HEAD
 
 
 " load local vimrc
@@ -684,3 +685,5 @@ if !empty(glob("~/local.vim"))
     source ~/local.vim
 endif
 
+=======
+>>>>>>> 0b347b08260adb0c642e848465ab40e7c0e9d699
